@@ -63,4 +63,4 @@ Damn I like not having to name classes lmao
 
 ## Acknowledgments
 
-I saw someone (Melvin Anguilar) on frontendmentor using tailwind for their projects and not only where they beatiful and tidy at glance, they were also really fluid and spaced perfectly
+I saw someone (Melvin Anguilar) on frontendmentor using tailwind for their projects and not only where they beatiful and tidy at glance, they were also really fluid and spaced perfectly so I wanted to at least try achieving that, although it was hard fighting my muscle memory and jump into the css file
