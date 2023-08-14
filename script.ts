@@ -51,34 +51,38 @@ newTodoElement?.addEventListener("keydown", (e) => {
   if (e.key == "Enter" && newTodoElement.value.trim() !== "") {
     const listElement = document.createElement("div");
     listElement.classList.add(
-      ..."list-element tw-h-[48px] tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100".split(
+      ..."list-element tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100 tw-py-[1.4rem] tw-items-center".split(
         " "
       )
     );
-    listElement.innerHTML = `<!-- CHECKMARK -->
+    listElement.innerHTML = `
+          <!-- CHECKMARK -->
           <label
-            class="tw-peer tw-block tw-relative hover:tw-cursor-pointer"
+            class="tw-peer hover:tw-cursor-pointer tw-flex tw-items-center"
           >
             <input
               type="checkbox"
-              class="tw-absolute tw-top-0 tw-h-0 tw-w-0 tw-opacity-0"
+              class="tw-h-0 tw-w-0 tw-opacity-0"
               checked="checked"
             />
             <span
-              class="checkbox tw-absolute tw-top-0 tw-left-0 tw-h-[22px] tw-w-[22px] tw-rounded-full tw-my-[1.4rem] tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200  hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
+              class="checkbox tw-relative tw-block tw-h-[22px] tw-w-[22px] tw-rounded-full tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
             ></span>
           </label>
           <!-- CONTENT -->
           <span
-            class="tw-w-full tw-h-[50px] tw-pl-[4.8rem] tw-text-lightM-gray600 dark:tw-text-darkM-white tw-flex tw-items-center peer-[.checked]:tw-line-through peer-[.checked]:tw-text-lightM-gray300 dark:peer-[.checked]:tw-text-darkM-darkGray200 hover:tw-cursor-pointer break-word tw-pr-[0.6rem]"
-            >${newTodoElement.value}</span
+            class="tw-w-full tw-text-lightM-gray600 dark:tw-text-darkM-white tw-flex tw-items-center peer-[.checked]:tw-line-through peer-[.checked]:tw-text-lightM-gray300 dark:peer-[.checked]:tw-text-darkM-darkGray200 hover:tw-cursor-pointer break-word tw-pr-[0.6rem] tw-break-words tw-pt-[2px]"
           >
+            ${newTodoElement.value}
+          </span>
+
           <!-- DELETE BUTTON -->
           <img
             src="images/icon-cross.svg"
             alt="remove element"
             class="delete-btn tw-ml-auto tw-w-[14px] tw-h-[14px] tw-self-center hover:tw-cursor-pointer tw-mr-[1.4rem] desktop:tw-hidden"
-          />`;
+          />
+        `;
 
     newTodoElement.value = "";
     assignListEvents(listElement);

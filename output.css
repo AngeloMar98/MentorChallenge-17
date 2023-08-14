@@ -712,6 +712,10 @@ label:not(.checked) .checkbox::before {
   height: 100%;
 }
 
+.tw-min-h-\[50px\] {
+  min-height: 50px;
+}
+
 .tw-w-0 {
   width: 0px;
 }
@@ -777,6 +781,10 @@ label:not(.checked) .checkbox::before {
   overflow: hidden;
 }
 
+.tw-break-words {
+  overflow-wrap: break-word;
+}
+
 .tw-rounded-\[5px\] {
   border-radius: 5px;
 }
@@ -840,6 +848,16 @@ label:not(.checked) .checkbox::before {
   padding-right: 2.2rem;
 }
 
+.tw-py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tw-py-\[1\.4rem\] {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
 .tw-pb-\[1\.8rem\] {
   padding-bottom: 1.8rem;
 }
@@ -862,6 +880,18 @@ label:not(.checked) .checkbox::before {
 
 .tw-pt-\[5\.2rem\] {
   padding-top: 5.2rem;
+}
+
+.tw-pt-1 {
+  padding-top: 0.25rem;
+}
+
+.tw-pt-\[1px\] {
+  padding-top: 1px;
+}
+
+.tw-pt-\[2px\] {
+  padding-top: 2px;
 }
 
 .tw-align-middle {
