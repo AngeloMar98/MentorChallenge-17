@@ -631,6 +631,10 @@ label:not(.checked) .checkbox::before {
   z-index: 50;
 }
 
+.tw-m-\[1\.6rem\] {
+  margin: 1.6rem;
+}
+
 .tw-mx-\[1\.4rem\] {
   margin-left: 1.4rem;
   margin-right: 1.4rem;
@@ -656,6 +660,11 @@ label:not(.checked) .checkbox::before {
   margin-bottom: 1.4rem;
 }
 
+.tw-mx-\[1\.6rem\] {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+}
+
 .tw-ml-auto {
   margin-left: auto;
 }
@@ -666,6 +675,14 @@ label:not(.checked) .checkbox::before {
 
 .tw-mt-\[1\.4rem\] {
   margin-top: 1.4rem;
+}
+
+.tw-mt-\[6rem\] {
+  margin-top: 6rem;
+}
+
+.tw-mt-\[1\.6rem\] {
+  margin-top: 1.6rem;
 }
 
 .tw-block {
@@ -858,6 +875,11 @@ label:not(.checked) .checkbox::before {
   padding-bottom: 1.4rem;
 }
 
+.tw-py-\[1\.6rem\] {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
 .tw-pb-\[1\.8rem\] {
   padding-bottom: 1.8rem;
 }
@@ -892,6 +914,10 @@ label:not(.checked) .checkbox::before {
 
 .tw-pt-\[2px\] {
   padding-top: 2px;
+}
+
+.tw-pt-\[2\.2rem\] {
+  padding-top: 2.2rem;
 }
 
 .tw-align-middle {
