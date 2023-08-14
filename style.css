@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+- VEDERE BENE A OGNI TAGLIA
+- EFFETTI HOVER
+- AGGIUNGERE/RIMUOVERE ELEMENTI ALLA LISTA
+- MARCARLI COME COMPLETI
+- FILTRA DIVERSI TIPI DI ELEMENTI
+- ELIMINARE TUTTO
+*/
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    @apply tw-bg-gradient-to-t tw-to-lightPurple tw-from-cyan;
+  }
+
+  body {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  label.checked .checkbox {
+    @apply tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple;
+  }
+
+  label.checked .checkbox::after {
+    content: url("images/icon-check.svg");
+
+    position: absolute;
+    top: 5px;
+    left: 6px;
+  }
+
+  label:not(.checked) .checkbox::before {
+    /* CIRCLE INSIDE */
+    content: "";
+    position: absolute;
+    @apply tw-bg-[#fff] dark:tw-bg-darkM-darkBlue100;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+  }
+}
+@layer components {
+  .shadow-own {
+    box-shadow: 2px 8px 26px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .break-word {
+    word-break: break-word;
+  }
+  .tw-text-brightBlue {
+    --tw-text-opacity: 1;
+    color: hsl(220 98% 61% / var(--tw-text-opacity)) !important;
+  }
+}

@@ -1,36 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html
+  lang="en"
+  class="tw-dark tw-text-[54%] mobile:tw-text-[62.5%] tw-leading-none"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Todo app</title>
 
-  Todo
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body
+    class="tw-mx-[auto] tw-font-[600] tw-h-full dark:tw-bg-darkM-darkBlue200 tw-bg-[#fff] tw-text-[1.5rem]"
+  >
+    <header
+      class="tw-h-[28vh] desktop:tw-h-[34vh] tw-bg-cover tw-bg-no-repeat tw-bg-[url(images/bg-mobile-light.jpg)] dark:tw-bg-[url(images/bg-mobile-dark.jpg)] desktop:tw-bg-[url(images/bg-desktop-light.jpg)] dark:desktop:tw-bg-[url(images/bg-desktop-dark.jpg)] tw-bg-center"
+    >
+      <div
+        class="tw-max-w-[60rem] tw-mx-auto tw-my-0 tw-flex tw-flex-row tw-justify-between tw-px-[2.2rem] tw-w-full tw-pt-[5.2rem]"
+      >
+        <span
+          class="tw-text-lightM-white tw-tracking-[14px] tw-text-[2.8rem] desktop:tw-text-[3.4rem] tw-uppercase tw-font-bold"
+          >todo</span
+        >
+        <div class="switch-theme tw-cursor-pointer">
+          <img
+            src="images/icon-moon.svg"
+            class="tw-h-[24px] tw-align-middle tw-block dark:tw-hidden"
+            alt="switch mode button"
+          />
+          <img
+            src="images/icon-sun.svg"
+            class="tw-h-[24px] tw-align-middle tw-hidden dark:tw-block"
+            alt="switch mode button"
+          />
+        </div>
+      </div>
+    </header>
 
-  <!-- Add dynamic number --> items left
+    <main
+      class="tw-px-[2.2rem] tw-max-w-[60rem] tw-mx-auto tw-my-0 tw-absolute tw-top-[20vh] tw-left-[50%] tw-translate-x-[-50%] tw-w-full"
+    >
+      <div class="tw-h-[48px] tw-bg-lightM-white tw-rounded-[5px]">
+        <label class="tw-block tw-relative hover:tw-cursor-pointer">
+          <input
+            type="checkbox"
+            class="tw-absolute tw-top-0 tw-h-0 tw-w-0 tw-opacity-0"
+            checked="checked"
+          />
+          <span
+            class="checkbox tw-absolute tw-top-0 tw-left-0 tw-h-[22px] tw-w-[22px] tw-rounded-full tw-my-[1.4rem] tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
+          ></span>
+        </label>
+        <textarea
+          maxlength="50"
+          id="new-todo"
+          placeholder="Create a new todo..."
+          class="tw-resize-none tw-w-full tw-h-full tw-pt-[1.8rem] tw-pl-[4.8rem] focus:tw-outline-none tw-rounded-[5px] dark:tw-bg-darkM-darkBlue100 dark:tw-text-darkM-white"
+        ></textarea>
+      </div>
+      <div
+        class="todo-list tw-bg-[#fff] tw-rounded-[5px] tw-text-lightM-gray400 tw-overflow-hidden tw-mt-[1.4rem] dark:tw-bg-darkM-darkBlue100 shadow-own"
+      >
+        <!-- LIST ELEMENTS -->
+        <div
+          class="list-element tw-h-[48px] tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100"
+        >
+          <!-- CHECKMARK -->
+          <label
+            class="checked tw-peer tw-block tw-relative hover:tw-cursor-pointer"
+          >
+            <input
+              type="checkbox"
+              class="tw-absolute tw-top-0 tw-h-0 tw-w-0 tw-opacity-0"
+              checked="checked"
+            />
+            <span
+              class="checkbox tw-absolute tw-top-0 tw-left-0 tw-h-[22px] tw-w-[22px] tw-rounded-full tw-my-[1.4rem] tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
+            ></span>
+          </label>
+          <!-- CONTENT -->
+          <span
+            class="tw-w-full tw-h-[50px] tw-pl-[4.8rem] tw-text-lightM-gray600 dark:tw-text-darkM-white tw-flex tw-items-center peer-[.checked]:tw-line-through peer-[.checked]:tw-text-lightM-gray300 dark:peer-[.checked]:tw-text-darkM-darkGray200 hover:tw-cursor-pointer break-word tw-pr-[0.6rem]"
+            >Checking out my todo list solution</span
+          >
+          <!-- DELETE BUTTON -->
+          <img
+            src="images/icon-cross.svg"
+            alt="remove element"
+            class="delete-btn tw-ml-auto tw-w-[14px] tw-h-[14px] tw-self-center hover:tw-cursor-pointer tw-mr-[1.4rem] desktop:tw-hidden"
+          />
+        </div>
+        <div
+          class="list-element tw-h-[48px] tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100"
+        >
+          <!-- CHECKMARK -->
+          <label class="tw-peer tw-block tw-relative hover:tw-cursor-pointer">
+            <input
+              type="checkbox"
+              class="tw-absolute tw-top-0 tw-h-0 tw-w-0 tw-opacity-0"
+              checked="checked"
+            />
+            <span
+              class="checkbox tw-absolute tw-top-0 tw-left-0 tw-h-[22px] tw-w-[22px] tw-rounded-full tw-my-[1.4rem] tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
+            ></span>
+          </label>
+          <!-- CONTENT -->
+          <span
+            class="tw-w-full tw-h-[50px] tw-pl-[4.8rem] tw-text-lightM-gray600 dark:tw-text-darkM-white tw-flex tw-items-center peer-[.checked]:tw-line-through peer-[.checked]:tw-text-lightM-gray300 dark:peer-[.checked]:tw-text-darkM-darkGray200 hover:tw-cursor-pointer break-word tw-pr-[0.6rem]"
+            >Drink some water and stretch</span
+          >
+          <!-- DELETE BUTTON -->
+          <img
+            src="images/icon-cross.svg"
+            alt="remove element"
+            class="delete-btn tw-ml-auto tw-w-[14px] tw-h-[14px] tw-self-center hover:tw-cursor-pointer tw-mr-[1.4rem] desktop:tw-hidden"
+          />
+        </div>
 
-  All
-  Active 
-  Completed
+        <!-- BOTTOM OF THE LIST -->
+        <div
+          class="tw-mx-[1.4rem] tw-pt-[1.4rem] tw-pb-[1.8rem] tw-flex tw-flex-row tw-justify-between tw-text-lightM-gray300 desktop:tw-text-[1.4rem] dark:tw-text-darkM-darkGray200"
+        >
+          <span><span class="n-items-left">0</span> items left</span>
+          <div
+            class="list-filter list-filter-inside tw-flex-row tw-justify-center tw-items-center tw-gap-[1.4rem] tw-hidden desktop:tw-flex tw-text-lightM-gray400 dark:tw-text-darkM-darkGray100"
+          >
+            <span
+              class="filter filter-all hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white tw-text-brightBlue"
+              >All</span
+            >
+            <span
+              class="filter filter-active hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white"
+              >Active</span
+            >
+            <span
+              class="filter filter-completed hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white"
+              >Completed</span
+            >
+          </div>
+          <span
+            class="clear-completed hover:tw-cursor-pointer hover:tw-text-lightM-gray600 dark:hover:tw-text-darkM-white"
+            >Clear Completed</span
+          >
+        </div>
+      </div>
 
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div
+        class="list-filter list-filter-outside tw-flex tw-flex-row tw-justify-center tw-items-center tw-gap-[1.2rem] tw-h-[48px] tw-text-[1.6rem] tw-font-bold tw-text-lightM-gray400 tw-rounded-[5px] tw-z-50 tw-my-[1.4rem] tw-bg-[#fff] desktop:tw-hidden dark:tw-bg-darkM-darkBlue100 dark:tw-text-darkM-darkGray100 shadow-own"
+      >
+        <span
+          class="filter filter-all hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white tw-text-brightBlue"
+          >All</span
+        >
+        <span
+          class="filter filter-active hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white"
+          >Active</span
+        >
+        <span
+          class="filter filter-completed hover:tw-text-lightM-gray600 hover:tw-cursor-pointer tw-transition-all tw-duration-150 dark:hover:tw-text-darkM-white"
+          >Completed</span
+        >
+      </div>
+    </main>
+  </body>
 </html>
