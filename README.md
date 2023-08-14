@@ -33,7 +33,7 @@ Users should be able to:
 ### Screenshot
 
 ![dark mode desktop](https://i.imgur.com/kK7cRgk.jpg) 
-<img href="https://i.imgur.com/kO6Q9vW.png" alt="drawing" width="200px"/>
+<img src="https://i.imgur.com/kO6Q9vW.png" alt="drawing" width="200px"/>
 
 
 ### Links
