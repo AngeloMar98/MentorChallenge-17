@@ -51,7 +51,7 @@ newTodoElement?.addEventListener("keydown", (e) => {
   if (e.key == "Enter" && newTodoElement.value.trim() !== "") {
     const listElement = document.createElement("div");
     listElement.classList.add(
-      ..."list-element tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100 tw-py-[1.4rem] tw-items-center".split(
+      ..."list-element tw-border-b-[1px] tw-border-b-darkM-white tw-flex tw-flex-row dark:tw-border-b-darkM-darkGray100 tw-py-[1.6rem] tw-items-center".split(
         " "
       )
     );
@@ -66,7 +66,7 @@ newTodoElement?.addEventListener("keydown", (e) => {
               checked="checked"
             />
             <span
-              class="checkbox tw-relative tw-block tw-h-[22px] tw-w-[22px] tw-rounded-full tw-mx-[1.4rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
+              class="checkbox tw-relative tw-block tw-h-[22px] tw-w-[22px] tw-rounded-full tw-mx-[1.6rem] tw-bg-lightM-gray300 dark:tw-bg-darkM-darkGray200 hover:tw-bg-gradient-to-br tw-from-cyan tw-to-lightPurple"
             ></span>
           </label>
           <!-- CONTENT -->
