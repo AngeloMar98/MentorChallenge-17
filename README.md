@@ -33,11 +33,12 @@ Users should be able to:
 ### Screenshot
 
 ![dark mode desktop](https://i.imgur.com/kK7cRgk.jpg) 
-![dark mode mobile](https://i.imgur.com/kO6Q9vW.png) 
+<img src="(https://i.imgur.com/kO6Q9vW.png)" alt="drawing" width="200px"/>
+
 
 ### Links
 
-- LIVE SITE: [LIVE SITE](https://mentor-challenge-17.vercel.app/)
+- [LIVE SITE](https://mentor-challenge-17.vercel.app/)
 
 ## My process
 
