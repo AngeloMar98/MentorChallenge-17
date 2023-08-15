@@ -611,16 +611,8 @@ label:not(.checked) .checkbox::before {
   position: relative;
 }
 
-.tw-left-0 {
-  left: 0px;
-}
-
 .tw-left-\[50\%\] {
   left: 50%;
-}
-
-.tw-top-0 {
-  top: 0px;
 }
 
 .tw-top-\[20vh\] {
@@ -638,6 +630,11 @@ label:not(.checked) .checkbox::before {
 .tw-mx-\[1\.4rem\] {
   margin-left: 1.4rem;
   margin-right: 1.4rem;
+}
+
+.tw-mx-\[1\.6rem\] {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 .tw-mx-\[auto\] {
@@ -660,9 +657,8 @@ label:not(.checked) .checkbox::before {
   margin-bottom: 1.4rem;
 }
 
-.tw-mx-\[1\.6rem\] {
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+.tw-mb-\[1\.4rem\] {
+  margin-bottom: 1.4rem;
 }
 
 .tw-ml-auto {
@@ -675,14 +671,6 @@ label:not(.checked) .checkbox::before {
 
 .tw-mt-\[1\.4rem\] {
   margin-top: 1.4rem;
-}
-
-.tw-mt-\[6rem\] {
-  margin-top: 6rem;
-}
-
-.tw-mt-\[1\.6rem\] {
-  margin-top: 1.6rem;
 }
 
 .tw-block {
@@ -717,20 +705,8 @@ label:not(.checked) .checkbox::before {
   height: 28vh;
 }
 
-.tw-h-\[48px\] {
-  height: 48px;
-}
-
-.tw-h-\[50px\] {
-  height: 50px;
-}
-
 .tw-h-full {
   height: 100%;
-}
-
-.tw-min-h-\[50px\] {
-  min-height: 50px;
 }
 
 .tw-w-0 {
@@ -865,11 +841,6 @@ label:not(.checked) .checkbox::before {
   padding-right: 2.2rem;
 }
 
-.tw-py-\[2rem\] {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .tw-py-\[1\.4rem\] {
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
@@ -884,10 +855,6 @@ label:not(.checked) .checkbox::before {
   padding-bottom: 1.8rem;
 }
 
-.tw-pl-\[4\.8rem\] {
-  padding-left: 4.8rem;
-}
-
 .tw-pr-\[0\.6rem\] {
   padding-right: 0.6rem;
 }
@@ -896,28 +863,16 @@ label:not(.checked) .checkbox::before {
   padding-top: 1.4rem;
 }
 
-.tw-pt-\[1\.8rem\] {
-  padding-top: 1.8rem;
-}
-
-.tw-pt-\[5\.2rem\] {
-  padding-top: 5.2rem;
-}
-
-.tw-pt-1 {
-  padding-top: 0.25rem;
-}
-
-.tw-pt-\[1px\] {
-  padding-top: 1px;
+.tw-pt-\[2\.2rem\] {
+  padding-top: 2.2rem;
 }
 
 .tw-pt-\[2px\] {
   padding-top: 2px;
 }
 
-.tw-pt-\[2\.2rem\] {
-  padding-top: 2.2rem;
+.tw-pt-\[5\.2rem\] {
+  padding-top: 5.2rem;
 }
 
 .tw-align-middle {
